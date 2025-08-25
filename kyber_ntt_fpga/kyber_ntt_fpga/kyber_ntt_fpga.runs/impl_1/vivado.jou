@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Aug 25 10:27:47 2025
+# Process ID: 18156
+# Current directory: D:/Verilog code/kyber_ntt_fpga/kyber_ntt_fpga/kyber_ntt_fpga.runs/impl_1
+# Command line: vivado.exe -log kyber_ntt_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source kyber_ntt_wrapper.tcl -notrace
+# Log file: D:/Verilog code/kyber_ntt_fpga/kyber_ntt_fpga/kyber_ntt_fpga.runs/impl_1/kyber_ntt_wrapper.vdi
+# Journal file: D:/Verilog code/kyber_ntt_fpga/kyber_ntt_fpga/kyber_ntt_fpga.runs/impl_1\vivado.jou
+# Running On: IIEzc, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34013 MB
+#-----------------------------------------------------------
+source kyber_ntt_wrapper.tcl -notrace

@@ -1,0 +1,88 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Mon Aug 25 10:28:07 2025
+| Host         : IIEzc running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file kyber_ntt_wrapper_control_sets_placed.rpt
+| Design       : kyber_ntt_wrapper
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    10 |
+|    Minimum number of control sets                        |    10 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    10 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              12 |           12 |
+| No           | No                    | Yes                    |              32 |           11 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             120 |           52 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                       Enable Signal                      |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+----------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | ntt_core/controller/E[0]                                 | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG | ntt_core/addr_gen/base_gen/cycle_counter[4]_i_1__0_n_0   | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG | ntt_core/controller/FSM_sequential_state_reg[1]_3[0]     | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | ntt_core/controller/cycle_counter[7]_i_1_n_0             | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG |                                                          |                                           |               12 |             12 |         1.00 |
+|  clk_IBUF_BUFG | ntt_core/controller/FSM_sequential_state_reg[0]_inv_2[0] | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG | ntt_core/controller/FSM_sequential_state_reg[0]_inv_1[0] | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG | ntt_core/controller/FSM_sequential_state_reg[1]_2[0]     | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG |                                                          | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | ntt_core/controller/compute_enable_reg_0[0]              | ntt_core/bf_array/BF_GEN[0].bf_inst/rst_n |               22 |             44 |         2.00 |
++----------------+----------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+
+
